@@ -1,4 +1,4 @@
-import { timestampToDate } from '../../utils';
+import { timestampToDate } from '~/utils';
 import { IWeatherMappers, Weather, WeatherFromApi } from './weather.interface';
 
 export default class WeatherMappers implements IWeatherMappers {

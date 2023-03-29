@@ -1,7 +1,7 @@
-import { WeatherApi } from '../api';
+import { WeatherApi } from '~/api';
 import { makeAutoObservable, runInAction } from 'mobx';
-import { Weather } from '../models';
-import { LangEnum, UnitsEnum } from '../enum';
+import { Weather } from '~/models';
+import { LangEnum, UnitsEnum } from '~/enum';
 
 class WeatherStore {
   weatherApi: WeatherApi;

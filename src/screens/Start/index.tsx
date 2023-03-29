@@ -1,9 +1,9 @@
 import React, { FC, useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
 import { Button, SafeAreaView, Text } from 'react-native';
-import { Routes } from '../../enum';
-import { useStores } from '../../hooks';
-import { NavigationActions } from '../../routes';
+import { Routes } from '~/enum';
+import { useStores } from '~/hooks';
+import { NavigationActions } from '~/routes';
 
 const StartScreen: FC = () => {
   const { weather } = useStores();
@@ -14,7 +14,7 @@ const StartScreen: FC = () => {
 
   return (
     <SafeAreaView>
-      <Text>StartPage</Text>
+      <Text>Start Screen</Text>
       <Button
         title="Go to Home"
         onPress={() => NavigationActions.navigate(Routes.HOME)}

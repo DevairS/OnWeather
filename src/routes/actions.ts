@@ -3,8 +3,8 @@ import {
   NavigationAction,
   NavigationContainerRef,
 } from '@react-navigation/native';
-import { Routes } from '../enum';
-import { NavigationParams } from '../types/navigation';
+import { Routes } from '~/enum';
+import { NavigationParams } from '~/types/navigation';
 
 let navigator: NavigationContainerRef<NavigationParams>;
 

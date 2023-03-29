@@ -1,6 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import { APPID, BASE_URL } from '@env';
 
+const apiKey = APPID
 export const api = axios.create({
   baseURL: BASE_URL,
   timeout: 30000,
@@ -15,7 +16,7 @@ const addAppIdRequest = (config: AxiosRequestConfig): AxiosRequestConfig => {
     ...config,
     params: {
       ...config.params,
-      appid: APPID,
+      appid: apiKey,
     },
   };
 };

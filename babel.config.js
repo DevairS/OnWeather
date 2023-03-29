@@ -8,5 +8,15 @@ module.exports = {
         path: '.env',
       },
     ],
+    [
+      'module-resolver',
+      {
+        root: ['./src'],
+        extensions: ['.ios.js', '.android.js', '.js', '.json'],
+        alias: {
+          '~': './src',
+        },
+      },
+    ],
   ],
 };

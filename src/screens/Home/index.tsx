@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Button, SafeAreaView, Text } from 'react-native';
-import { Routes } from '../../enum';
-import { NavigationActions } from '../../routes';
+import { Routes } from '~/enum';
+import { NavigationActions } from '~/routes';
 
 const HomeScreen: FC = () => {
   return (

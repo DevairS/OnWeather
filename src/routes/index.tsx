@@ -3,11 +3,11 @@ import {
   NavigationContainer,
   NavigationContainerRef,
 } from '@react-navigation/native';
-import { Routes } from '../enum';
+import { Routes } from '~/enum';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import * as NavigationActions from './actions';
-import { NavigationParams } from '../types/navigation';
-import { StartScreen, HomeScreen } from '../screens';
+import { NavigationParams } from '~/types/navigation';
+import { StartScreen, HomeScreen } from '~/screens';
 
 type Props = {
   setNavigationTopRef: (

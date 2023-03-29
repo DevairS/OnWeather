@@ -1,3 +1,37 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json"
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/api": [
+        "src/api"
+      ],
+      "~/enum": [
+        "src/enum"
+      ],
+      "~/hooks": [
+        "src/hooks"
+      ],
+      "~/models": [
+        "src/models"
+      ],
+      "~/screens": [
+        "src/screens"
+      ],
+      "~/routes": [
+        "src/routes"
+      ],
+      "~/stores": [
+        "src/stores"
+      ],
+      "~/types/*": [
+        "src/types/*"
+      ],
+      "~/utils": [
+        "src/utils"
+      ]
+    }
+  }
 }

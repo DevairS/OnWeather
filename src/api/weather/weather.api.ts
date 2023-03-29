@@ -1,9 +1,9 @@
-import { LangEnum, UnitsEnum } from '../../enum';
+import { LangEnum, UnitsEnum } from '~/enum';
 import {
   WeatherFromApi,
   weatherMappers,
   Weather,
-} from '../../models';
+} from '~/models';
 import api from '../api';
 
 export default class WeatherApi {

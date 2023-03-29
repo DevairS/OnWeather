@@ -1,4 +1,4 @@
-import { Routes } from '../enum';
+import { Routes } from '~/enum';
 
 export type NavigationProps ={
   [Routes.START]: undefined;
