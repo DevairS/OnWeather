@@ -19,7 +19,6 @@ class WeatherStore {
       UnitsEnum.celsius,
       LangEnum.pt_br
     );
-    console.log('data', data)
     runInAction(() => {
       this.weatherData = data;
     });
