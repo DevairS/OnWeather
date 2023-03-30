@@ -1,9 +1,10 @@
 import React, { FC, useCallback, useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
-import { Button, SafeAreaView, Text } from 'react-native';
+import { Button, Text } from 'react-native';
 import { Routes } from '~/enum';
 import { useStores } from '~/hooks';
 import { NavigationActions } from '~/routes';
+import { Wrapper } from './style';
 
 const StartScreen: FC = () => {
   const { weather, app } = useStores();
@@ -29,13 +30,13 @@ const StartScreen: FC = () => {
   }, [getCurrentWeather, location]);
 
   return (
-    <SafeAreaView>
+    <Wrapper>
       <Text>Start Screen</Text>
       <Button
         title="Go to Home"
         onPress={() => NavigationActions.navigate(Routes.HOME)}
       />
-    </SafeAreaView>
+    </Wrapper>
   );
 };
 
