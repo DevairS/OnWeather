@@ -1,4 +1,3 @@
-
 import { NativeModules } from 'react-native';
 import Reactotron from 'reactotron-react-native';
 

@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import { APPID, BASE_URL } from '@env';
 
-const apiKey = APPID
+const apiKey = APPID;
 export const api = axios.create({
   baseURL: BASE_URL,
   timeout: 30000,

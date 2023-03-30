@@ -1,9 +1,5 @@
 import { LangEnum, UnitsEnum } from '~/enum';
-import {
-  WeatherFromApi,
-  weatherMappers,
-  Weather,
-} from '~/models';
+import { WeatherFromApi, weatherMappers, Weather } from '~/models';
 import api from '../api';
 
 export default class WeatherApi {
@@ -23,9 +19,9 @@ export default class WeatherApi {
         },
       });
       return weatherMappers.mapWeather(data);
-    } catch (error: any) {
-      throw new Error(error);
+    } catch (err) {
+      const error = err as Error;
+      throw new Error(error.message);
     }
   };
-
 }

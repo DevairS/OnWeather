@@ -17,7 +17,7 @@ class WeatherStore {
       lat,
       lon,
       UnitsEnum.celsius,
-      LangEnum.pt_br
+      LangEnum.pt_br,
     );
     runInAction(() => {
       this.weatherData = data;
