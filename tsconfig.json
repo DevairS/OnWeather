@@ -8,6 +8,9 @@
       "~/api": [
         "src/api"
       ],
+      "~/components": [
+        "src/components"
+      ],
       "~/enum": [
         "src/enum"
       ],
@@ -25,6 +28,9 @@
       ],
       "~/stores": [
         "src/stores"
+      ],
+      "~/theme": [
+        "src/theme"
       ],
       "~/types/*": [
         "src/types/*"

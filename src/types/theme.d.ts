@@ -1,11 +1,6 @@
 import 'styled-components/native';
+import { Theme } from '~/theme';
 
 declare module 'styled-components' {
-  export interface DefaultTheme {
-    background: string;
-    surface: string;
-    primary: string;
-    error: string;
-    active: string;
-  }
+  export interface DefaultTheme extends Theme {}
 }

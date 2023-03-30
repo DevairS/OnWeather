@@ -1,10 +1,9 @@
 import React, { FC, useCallback, useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
-import { Button, Text } from 'react-native';
 import { Routes } from '~/enum';
 import { useStores } from '~/hooks';
 import { NavigationActions } from '~/routes';
-import { Wrapper } from './style';
+import { TextLoading, Wrapper } from './style';
 
 const StartScreen: FC = () => {
   const { weather, app } = useStores();
@@ -31,11 +30,7 @@ const StartScreen: FC = () => {
 
   return (
     <Wrapper>
-      <Text>Start Screen</Text>
-      <Button
-        title="Go to Home"
-        onPress={() => NavigationActions.navigate(Routes.HOME)}
-      />
+      <TextLoading>Loading APP</TextLoading>
     </Wrapper>
   );
 };

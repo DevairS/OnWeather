@@ -6,7 +6,7 @@ import store from '~/stores';
 import { Provider as StoreProvider } from 'mobx-react';
 import { ThemeProvider } from 'styled-components/native';
 import '~/utils/config/reactotron';
-import { theme } from './theme';
+import { theme } from '~/theme';
 
 const App: FC = () => {
   return (
