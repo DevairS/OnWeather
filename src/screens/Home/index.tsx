@@ -1,20 +1,19 @@
-import React, { FC } from 'react';
-import { Button, SafeAreaView, Text } from 'react-native';
-import { Routes } from '~/enum';
+import React, { FC, useCallback } from 'react';
+import { observer } from 'mobx-react-lite';
 import { useStores } from '~/hooks';
-import { NavigationActions } from '~/routes';
+import Home from './Home';
 
-const HomeScreen: FC = () => {
-  const { weather } = useStores();
+const HomeContainer: FC = () => {
+  const { weather, app } = useStores();
+  const { location } = app;
+
+  const updateWeather = useCallback(async () => {
+    await weather.getCurrentWeather(location.lat, location.lon);
+  }, [location.lat, location.lon, weather]);
+
   return (
-    <SafeAreaView>
-      <Text>Home Screen {weather.weatherData.name}</Text>
-      <Button
-        title="Go to Start"
-        onPress={() => NavigationActions.navigate(Routes.START)}
-      />
-    </SafeAreaView>
+    <Home weatherData={weather.weatherData} updateWeather={updateWeather} />
   );
 };
 
-export default HomeScreen;
+export default observer(HomeContainer);
