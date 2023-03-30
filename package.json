@@ -9,7 +9,8 @@
     "lint:fix": "eslint \"./src/**/*.{js,jsx,ts,tsx}\" --fix --max-warnings 100",
     "start": "react-native start",
     "test": "jest",
-    "postinstall": "react-native setup-ios-permissions && pod-install"
+    "postinstall": "react-native setup-ios-permissions && pod-install",
+    "extract-compile": "formatjs extract 'src/**/*.ts*' --ignore='**/*.d.ts' [ --out-file temp.json --flatten --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs compile 'temp.json' --out-file src/lang/pt_br.json && rm temp.json"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.5.7",
@@ -20,6 +21,7 @@
     "mobx-react": "^8.0.0",
     "mobx-react-lite": "^4.0.2",
     "react": "18.2.0",
+    "react-intl": "^6.3.2",
     "react-native": "0.71.4",
     "react-native-geolocation-service": "^5.3.1",
     "react-native-permissions": "^3.8.0",
@@ -31,6 +33,7 @@
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
+    "@formatjs/cli": "^6.0.4",
     "@react-native-community/eslint-config": "^3.2.0",
     "@tsconfig/react-native": "^2.0.2",
     "@types/jest": "^29.2.1",

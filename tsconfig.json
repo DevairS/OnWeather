@@ -17,8 +17,14 @@
       "~/hooks": [
         "src/hooks"
       ],
+      "~/lang": [
+        "src/lang"
+      ],
       "~/models": [
         "src/models"
+      ],
+      "~/providers": [
+        "src/providers"
       ],
       "~/screens": [
         "src/screens"

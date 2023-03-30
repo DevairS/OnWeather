@@ -8,12 +8,14 @@ import {
   LocationFromGeolocation,
 } from '~/models';
 import { PlatformOSType } from 'react-native/types';
+import { LangEnum, UnitsEnum } from '~/enum';
 
 const opt = { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 };
 
 class AppStore {
   location: LocationType = {} as LocationType;
-
+  unit: UnitsEnum = UnitsEnum.celsius;
+  lang: LangEnum = LangEnum.pt_br;
   deviceOs: PlatformOSType = Platform.OS;
 
   constructor() {
