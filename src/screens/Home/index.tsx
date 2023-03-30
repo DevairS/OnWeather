@@ -12,7 +12,11 @@ const HomeContainer: FC = () => {
   }, [location.lat, location.lon, weather]);
 
   return (
-    <Home weatherData={weather.weatherData} updateWeather={updateWeather} />
+    <Home
+      weatherData={weather.weatherData}
+      updateWeather={updateWeather}
+      activeUnit={app.unit}
+    />
   );
 };
 
