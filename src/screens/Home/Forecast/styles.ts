@@ -1,8 +1,9 @@
 import styled from 'styled-components/native';
+import { Icons } from '~/assets';
 import { Icon, Typography } from '~/components';
 
 type IconWeatherProps = {
-  icon: string;
+  icon: keyof Icons;
 };
 
 export const WrapperCard = styled.View`

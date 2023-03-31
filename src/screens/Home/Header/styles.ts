@@ -1,5 +1,10 @@
 import styled from 'styled-components/native';
-import { Typography } from '~/components';
+import { Icons } from '~/assets';
+import { Icon, Typography } from '~/components';
+
+type IconUpdateProps = {
+  icon: keyof Icons;
+};
 
 export const Wrapper = styled.View`
   justify-content: space-between;
@@ -12,3 +17,9 @@ export const Localization = styled(Typography).attrs({ variant: 'largeTitle' })`
 `;
 
 export const TextDate = styled(Typography).attrs({ variant: 'callout' })``;
+
+export const IconUpdate = styled(Icon).attrs<IconUpdateProps>(({ icon }) => ({
+  icon,
+  width: 20,
+  height: 20,
+}))``;

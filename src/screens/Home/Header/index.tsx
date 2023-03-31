@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import { FormattedDate, FormattedMessage } from 'react-intl';
+import { FormattedDate } from 'react-intl';
 import { View } from 'react-native';
 import { Button } from '~/components';
 import { Weather } from '~/models';
-import { Wrapper, Localization, TextDate } from './styles';
+import { Wrapper, Localization, TextDate, IconUpdate } from './styles';
 
 type Props = {
   weatherData: Weather;
@@ -26,8 +26,8 @@ const Header: FC<Props> = ({ weatherData, updateWeather }) => {
           )}
         </TextDate>
       </View>
-      <Button onPress={updateWeather}>
-        <FormattedMessage id="Home.Header.Update" defaultMessage="Atualizar" />
+      <Button onPress={updateWeather} text="Atualizar">
+        <IconUpdate icon="refresh" />
       </Button>
     </Wrapper>
   );

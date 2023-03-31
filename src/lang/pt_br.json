@@ -1,3 +1,8 @@
 {
+  "Home.Details.feelsLike": "Sensação Térmica",
+  "Home.Details.humidity": "Umidade",
+  "Home.Details.sunrise": "Nascer do Sol",
+  "Home.Details.sunset": "Pôr do Sol",
+  "Home.Forecast.Title": "Previsão para os proximos 5 dias",
   "Home.Header.Update": "Atualizar"
 }
