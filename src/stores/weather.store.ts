@@ -1,14 +1,18 @@
 import { WeatherApi } from '~/api';
 import { makeAutoObservable, runInAction } from 'mobx';
-import { Weather } from '~/models';
+import { Forecast, Weather } from '~/models';
 import { LangEnum, UnitsEnum } from '~/enum';
+import { RootStore } from '.';
 
 class WeatherStore {
+  rootStore: RootStore;
   weatherApi: WeatherApi;
   weatherData: Weather = {} as Weather;
+  forecastData: Forecast[] = [];
 
-  constructor() {
+  constructor(rootStore: RootStore) {
     makeAutoObservable(this);
+    this.rootStore = rootStore;
     this.weatherApi = new WeatherApi();
   }
 
@@ -21,6 +25,18 @@ class WeatherStore {
     );
     runInAction(() => {
       this.weatherData = data;
+    });
+  };
+
+  getForecastWeather = async (lat: number, lon: number): Promise<void> => {
+    const data = await this.weatherApi.getForecast(
+      lat,
+      lon,
+      this.rootStore.app.unit,
+      this.rootStore.app.lang,
+    );
+    runInAction(() => {
+      this.forecastData = data;
     });
   };
 }

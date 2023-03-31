@@ -7,7 +7,7 @@ class RootStore {
 
   constructor() {
     this.app = new AppStore();
-    this.weather = new WeatherStore();
+    this.weather = new WeatherStore(this);
   }
 }
 

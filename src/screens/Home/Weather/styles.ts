@@ -9,7 +9,7 @@ export const CardWeather = styled.View`
   background-color: ${({ theme }) => theme.colors.surface};
   padding: 8px;
   margin-top: 10px;
-  border-radius: 8px;
+  border-radius: ${({ theme }) => theme.radius.mediumRadius};
   height: 120px;
   flex-direction: row;
   align-items: center;

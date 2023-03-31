@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { Typography } from '~/components';
+import Typography from '../Typography';
 import { FontSize } from '~/theme';
 
 type Props = {

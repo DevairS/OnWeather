@@ -6,8 +6,7 @@ type Props = {
   height?: number;
 };
 
-const IconComponent: FC<Props> = ({ icon, width, height }) => {
-  console.log('aquii,', icon);
+const IconComponent: FC<Props> = ({ icon, width = 64, height = 64 }) => {
   const ImportedIconRef = useRef<any>(null);
   const [loading, setLoading] = useState(false);
 

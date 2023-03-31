@@ -8,12 +8,16 @@ const HomeContainer: FC = () => {
   const { location } = app;
 
   const updateWeather = useCallback(async () => {
-    await weather.getCurrentWeather(location.lat, location.lon);
+    await Promise.all([
+      weather.getCurrentWeather(location.lat, location.lon),
+      weather.getForecastWeather(location.lat, location.lon),
+    ]);
   }, [location.lat, location.lon, weather]);
 
   return (
     <Home
       weatherData={weather.weatherData}
+      forecastData={weather.forecastData}
       updateWeather={updateWeather}
       activeUnit={app.unit}
     />

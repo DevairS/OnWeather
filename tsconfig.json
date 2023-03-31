@@ -33,7 +33,10 @@
         "src/screens"
       ],
       "~/routes": [
-        "src/routes"
+        "src/routes",
+      ],
+      "~/routes/actions": [
+        "src/routes/actions",
       ],
       "~/stores": [
         "src/stores"

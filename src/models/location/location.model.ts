@@ -9,7 +9,6 @@ export default class LocationMappers implements ILocationMappers {
     try {
       return { lat: location.coords.latitude, lon: location.coords.longitude };
     } catch (err) {
-      console.log('error', err);
       const error = err as Error;
       throw new Error(error.message);
     }

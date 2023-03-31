@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { UnitsEnum } from '~/enum';
-import { Visible } from '~/components';
+import Visible from '../Visible';
 import { Container, Unit, Temp } from './styles';
 import { FontSize } from '~/theme';
 

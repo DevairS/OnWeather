@@ -10,7 +10,6 @@ type Props = {
 };
 
 const Weather: FC<Props> = ({ weatherData, activeUnit }) => {
-  console.log('weatherData', weatherData.weather.icon);
   return (
     <CardWeather>
       <TempWrapper>
@@ -21,7 +20,7 @@ const Weather: FC<Props> = ({ weatherData, activeUnit }) => {
           variant="extraLargeTitle"
         />
       </TempWrapper>
-      <IconWeather url={weatherData.weather.icon} />
+      <IconWeather icon={weatherData.weather.icon} />
     </CardWeather>
   );
 };
