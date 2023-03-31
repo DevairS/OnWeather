@@ -5,6 +5,7 @@ import Header from './Header';
 import Weather from './Weather';
 import { Wrapper, WrapperContent } from './styles';
 import Forecast from './Forecast';
+import Details from './Details';
 
 type Props = {
   weatherData: WeatherType;
@@ -24,6 +25,7 @@ const Home: FC<Props> = ({
       <WrapperContent>
         <Header weatherData={weatherData} updateWeather={updateWeather} />
         <Weather weatherData={weatherData} activeUnit={activeUnit} />
+        <Details weatherData={weatherData} activeUnit={activeUnit} />
         <Forecast forecastData={forecastData} activeUnit={activeUnit} />
       </WrapperContent>
     </Wrapper>
