@@ -8,11 +8,9 @@ const SettingsContainer: FC = () => {
   const { app, weather } = useStores();
   const { location } = app;
 
-  const updateWeather = async () => {
-    await Promise.all([
-      weather.getCurrentWeather(location.lat, location.lon),
-      weather.getForecastWeather(location.lat, location.lon),
-    ]);
+  const updateWeather = () => {
+    weather.getCurrentWeather(location.lat, location.lon);
+    weather.getForecastWeather(location.lat, location.lon);
   };
 
   const handleSwitchUnit = (unit: UnitsEnum) => {
