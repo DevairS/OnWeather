@@ -1,3 +1,5 @@
+import { Icons } from '~/assets';
+
 export interface ForecastFromApi {
   cod: string;
   message: number;
@@ -19,7 +21,7 @@ export interface ForecastFromApi {
       id: number;
       main: string;
       description: string;
-      icon: string;
+      icon: keyof Icons;
     }[];
     clouds: {
       all: number;
@@ -57,7 +59,7 @@ export interface ForecastFromApi {
 interface ForecastMain {
   main: string;
   description: string;
-  icon: string;
+  icon: keyof Icons;
 }
 
 export interface Forecast {

@@ -16,14 +16,14 @@ export const List = styled.FlatList.attrs({
 })``;
 
 export const Card = styled.View`
-  width: 80px;
+  width: 100px;
   height: 140px;
   border-radius: ${({ theme }) => theme.radius.mediumRadius}px;
   background-color: ${({ theme }) => theme.colors.surface};
   align-items: center;
   margin-right: 10px;
   justify-content: space-between;
-  padding: 4px 0;
+  padding: 4px;
 `;
 
 export const CardTop = styled.View`

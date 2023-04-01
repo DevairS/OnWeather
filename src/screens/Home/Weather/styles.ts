@@ -11,7 +11,7 @@ export const CardWeather = styled.View`
   padding: 8px;
   margin-top: 10px;
   border-radius: ${({ theme }) => theme.radius.mediumRadius}px;
-  height: 120px;
+  height: 140px;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;

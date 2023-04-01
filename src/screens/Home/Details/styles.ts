@@ -6,7 +6,7 @@ export const Wrapper = styled.View`
   padding: 16px 24px;
   background-color: ${({ theme }) => theme.colors.surface};
   border-radius: ${({ theme }) => theme.radius.mediumRadius}px;
-  height: 140px;
+  height: 160px;
   justify-content: space-between;
 `;
 

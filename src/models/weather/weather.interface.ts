@@ -1,3 +1,5 @@
+import { Icons } from '~/assets';
+
 export interface WeatherFromApi {
   coord: {
     lon: number;
@@ -7,7 +9,7 @@ export interface WeatherFromApi {
     id: number;
     main: string;
     description: string;
-    icon: string;
+    icon: keyof Icons;
   }[];
   base: string;
   main: {
@@ -44,7 +46,7 @@ export interface WeatherFromApi {
 interface WeatherMain {
   main: string;
   description: string;
-  icon: string;
+  icon: keyof Icons;
 }
 
 export interface Weather {

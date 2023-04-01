@@ -5,8 +5,9 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint \"./src/**/*.{js,jsx,ts,tsx}\" --fix --max-warnings 100",
+    "ios14": "react-native run-ios --simulator='iPhone 14 Pro Max'",
+    "lint": "tsc && eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "tsc && eslint \"./src/**/*.{js,jsx,ts,tsx}\" --fix --max-warnings 100",
     "start": "react-native start",
     "test": "jest",
     "postinstall": "react-native setup-ios-permissions && pod-install",
