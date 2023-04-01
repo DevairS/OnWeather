@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { FormattedDate } from 'react-intl';
+import { FormattedDate, useIntl } from 'react-intl';
 import { View } from 'react-native';
 import { Button } from '~/components';
 import { Weather } from '~/models';
@@ -11,6 +11,7 @@ type Props = {
 };
 
 const Header: FC<Props> = ({ weatherData, updateWeather }) => {
+  const { formatMessage } = useIntl();
   return (
     <Wrapper>
       <View>
@@ -26,7 +27,12 @@ const Header: FC<Props> = ({ weatherData, updateWeather }) => {
           )}
         </TextDate>
       </View>
-      <Button onPress={updateWeather} text="Atualizar">
+      <Button
+        onPress={updateWeather}
+        text={formatMessage({
+          id: 'Home.Header.Update',
+          defaultMessage: 'Atualizar',
+        })}>
         <IconUpdate icon="refresh" />
       </Button>
     </Wrapper>

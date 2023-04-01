@@ -4,8 +4,11 @@
   "Home.Details.sunrise": "Sunrise",
   "Home.Details.sunset": "Sunset",
   "Home.Forecast.Title": "Forecast for the next 5 days",
+  "Home.Header.Update": "Update",
   "Home.Settings.Language": "Language",
   "Home.Settings.Settings": "Settings",
   "Home.Settings.Subhead": "Here you can set the configurations in your app",
-  "Home.Settings.Units": "Temperature Unit"
+  "Home.Settings.Units": "Temperature Unit",
+  "Navigator.Tab.Home": "Home",
+  "Navigator.Tab.Settings": "Settings"
 }
