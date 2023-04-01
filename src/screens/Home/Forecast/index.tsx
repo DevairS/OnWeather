@@ -1,5 +1,5 @@
 import React, { ElementType, FC } from 'react';
-import { FormattedMessage, FormattedTime } from 'react-intl';
+import { FormattedDate, FormattedMessage, FormattedTime } from 'react-intl';
 import { ListRenderItem } from 'react-native';
 import { Temperature } from '~/components';
 import { UnitsEnum } from '~/enum';
@@ -27,6 +27,9 @@ const Forecast: FC<Props> = ({ forecastData, activeUnit }) => {
         <TextCard>
           <FormattedTime value={item.date} />
         </TextCard>
+        <DetailWheather>
+          <FormattedDate value={item.date} day="2-digit" month="2-digit" />
+        </DetailWheather>
         <IconWeather icon={item.forecast.icon} />
         <Temperature unit={activeUnit} temp={item.temp} />
       </CardTop>
