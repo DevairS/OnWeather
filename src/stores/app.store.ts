@@ -22,6 +22,14 @@ class AppStore {
     makeAutoObservable(this);
   }
 
+  switchUnit = (unit: UnitsEnum): void => {
+    this.unit = unit;
+  };
+
+  switchLang = (lang: LangEnum): void => {
+    this.lang = lang;
+  };
+
   getPermissionLocation = async (): Promise<void> => {
     try {
       if (this.deviceOs === 'ios') {

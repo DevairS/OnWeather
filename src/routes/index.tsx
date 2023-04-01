@@ -7,7 +7,7 @@ import { Routes } from '~/enum';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import * as NavigationActions from './actions';
 import { NavigationParams } from '~/types/navigation';
-import { StartScreen, HomeScreen } from '~/screens';
+import { StartScreen, HomeScreen, SettingsScreen } from '~/screens';
 
 type Props = {
   setNavigationTopRef: (
@@ -37,6 +37,13 @@ const Navigation: FC<Props> = ({ setNavigationTopRef }) => {
           component={HomeScreen}
           options={{
             tabBarLabel: Routes.HOME,
+          }}
+        />
+        <Tab.Screen
+          name={Routes.SETTINGS}
+          component={SettingsScreen}
+          options={{
+            tabBarLabel: Routes.SETTINGS,
           }}
         />
       </Tab.Navigator>

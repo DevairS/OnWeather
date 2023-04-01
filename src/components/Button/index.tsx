@@ -5,17 +5,20 @@ import { Button, Text } from './styles';
 type Props = {
   onPress?: () => void;
   text?: string;
+  active?: boolean;
 };
 
 const ButtonComponent: FC<PropsWithChildren<Props>> = ({
   onPress,
   text,
+  active = true,
   children,
+  ...rest
 }) => {
   return (
-    <Button onPress={onPress}>
+    <Button onPress={onPress} active={active} {...rest}>
       <Visible when={!!text}>
-        <Text>{text}</Text>
+        <Text active={active}>{text}</Text>
       </Visible>
       {children}
     </Button>

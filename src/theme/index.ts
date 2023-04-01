@@ -2,7 +2,7 @@ import { colors, Colors } from './colors';
 import { radius, Radius } from './radius';
 import { fontSize, FontSize } from './fontSize';
 
-export type { FontSize };
+export type { FontSize, Radius };
 
 export const theme = {
   colors,

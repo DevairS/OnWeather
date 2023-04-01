@@ -1,13 +1,21 @@
 import styled from 'styled-components/native';
 import Typography from '../Typography';
 
-export const Button = styled.TouchableOpacity`
+type Props = {
+  active: boolean;
+};
+
+export const Button = styled.TouchableOpacity<Props>`
   padding: 4px;
-  background-color: ${({ theme }) => theme.colors.active};
+  background-color: ${({ active, theme }) =>
+    active ? theme.colors.active : theme.colors.surface};
   flex-direction: row;
   border-radius: ${({ theme }) => theme.radius.smallRadius}px;
+  justify-content: center;
+  align-items: center;
 `;
 
-export const Text = styled(Typography).attrs({ variant: 'body' })`
-  color: ${({ theme }) => theme.colors.buttonText};
+export const Text = styled(Typography).attrs({ variant: 'body' })<Props>`
+  color: ${({ theme, active }) =>
+    active ? theme.colors.buttonText : theme.colors.primary};
 `;

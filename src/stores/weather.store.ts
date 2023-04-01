@@ -1,7 +1,6 @@
 import { WeatherApi } from '~/api';
 import { makeAutoObservable, runInAction } from 'mobx';
 import { Forecast, Weather } from '~/models';
-import { LangEnum, UnitsEnum } from '~/enum';
 import { RootStore } from '.';
 
 class WeatherStore {
@@ -20,8 +19,8 @@ class WeatherStore {
     const data = await this.weatherApi.getWeather(
       lat,
       lon,
-      UnitsEnum.celsius,
-      LangEnum.pt_br,
+      this.rootStore.app.unit,
+      this.rootStore.app.lang,
     );
     runInAction(() => {
       this.weatherData = data;
