@@ -9,6 +9,8 @@ import {
 } from '~/models';
 import { PlatformOSType } from 'react-native/types';
 import { LangEnum, UnitsEnum } from '~/enum';
+import { makePersistable } from 'mobx-persist-store';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const opt = { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 };
 const defaultLocation = { lat: -23.5489, lon: -46.6388 };
@@ -21,6 +23,11 @@ class AppStore {
 
   constructor() {
     makeAutoObservable(this);
+    makePersistable(this, {
+      name: 'AppStore',
+      properties: ['unit', 'lang'],
+      storage: AsyncStorage,
+    });
   }
 
   switchUnit = (unit: UnitsEnum): void => {
