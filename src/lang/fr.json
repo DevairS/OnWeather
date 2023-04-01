@@ -1,0 +1,14 @@
+{
+  "Home.Details.feelsLike": "Ressenti",
+  "Home.Details.humidity": "Humidité",
+  "Home.Details.sunrise": "Lever du soleil",
+  "Home.Details.sunset": "Coucher du soleil",
+  "Home.Forecast.Title": "Prévisions pour les 5 prochains jours",
+  "Home.Header.Update": "Mise à jour",
+  "Home.Settings.Language": "Langue",
+  "Home.Settings.Settings": "Paramètres",
+  "Home.Settings.Subhead": "Ici, vous pouvez configurer les paramètres de votre application",
+  "Home.Settings.Units": "Unité de température",
+  "Navigator.Tab.Home": "Accueil",
+  "Navigator.Tab.Settings": "Paramètres"
+}
