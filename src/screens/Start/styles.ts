@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-import { Typography } from '~/components';
 
 export const Wrapper = styled.SafeAreaView`
   background-color: ${({ theme }) => theme.colors.background};
@@ -7,7 +6,3 @@ export const Wrapper = styled.SafeAreaView`
   justify-content: center;
   align-items: center;
 `;
-
-export const TextLoading = styled(Typography).attrs({
-  variant: 'body',
-})``;

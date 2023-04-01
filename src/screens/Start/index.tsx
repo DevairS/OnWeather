@@ -3,7 +3,9 @@ import { observer } from 'mobx-react-lite';
 import { Routes } from '~/enum';
 import { useStores } from '~/hooks';
 import { navigate } from '~/routes/actions';
-import { TextLoading, Wrapper } from './styles';
+import { Wrapper } from './styles';
+import Lottie from 'lottie-react-native';
+import { loading } from '~/assets';
 
 const StartScreen: FC = () => {
   const { weather, app } = useStores();
@@ -37,7 +39,7 @@ const StartScreen: FC = () => {
 
   return (
     <Wrapper>
-      <TextLoading>Loading APP</TextLoading>
+      <Lottie source={loading} autoPlay loop />
     </Wrapper>
   );
 };
