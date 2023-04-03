@@ -13,7 +13,6 @@ import { makePersistable } from 'mobx-persist-store';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const opt = { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 };
-const defaultLocation = { lat: -23.5489, lon: -46.6388 };
 
 class AppStore {
   location: LocationType = {} as LocationType;
@@ -36,10 +35,6 @@ class AppStore {
 
   switchLang = (lang: LangEnum): void => {
     this.lang = lang;
-  };
-
-  setDefaultLocation = (): void => {
-    this.location = defaultLocation;
   };
 
   getPermissionLocation = async (): Promise<void> => {

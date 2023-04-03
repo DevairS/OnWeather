@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect } from 'react';
+import React, { FC, useCallback, useEffect, useState } from 'react';
 import { observer } from 'mobx-react-lite';
 import { Routes } from '~/enum';
 import { useStores } from '~/hooks';
@@ -6,8 +6,10 @@ import { navigate } from '~/routes/actions';
 import { Wrapper } from './styles';
 import Lottie from 'lottie-react-native';
 import { loading } from '~/assets';
+import { PermissionModal } from '~/utils';
 
 const StartScreen: FC = () => {
+  const [visibleModal, setVisibleModal] = useState(false);
   const { weather, app } = useStores();
   const { location } = app;
 
@@ -25,11 +27,12 @@ const StartScreen: FC = () => {
     try {
       await app.getPermissionLocation();
     } catch (error) {
-      app.setDefaultLocation();
+      setVisibleModal(true);
     }
   }, [app]);
 
   useEffect(() => {
+    console.log('entrei');
     loadPermissions();
   }, [loadPermissions]);
 
@@ -40,6 +43,7 @@ const StartScreen: FC = () => {
   return (
     <Wrapper>
       <Lottie source={loading} autoPlay loop />
+      <PermissionModal visible={visibleModal} setVisible={setVisibleModal} />
     </Wrapper>
   );
 };

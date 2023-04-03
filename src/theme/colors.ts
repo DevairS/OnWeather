@@ -3,7 +3,7 @@ export const colors = {
   background: '#F0F2F5',
   surface: '#FFFFFF',
   error: '#B00020',
-  active: '#3B71CA',
+  active: '#F26969',
   buttonText: '#FFFFFF',
 };
 

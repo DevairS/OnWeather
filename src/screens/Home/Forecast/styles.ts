@@ -17,7 +17,7 @@ export const List = styled.FlatList.attrs({
 
 export const Card = styled.View`
   width: 100px;
-  height: 140px;
+  height: 150px;
   border-radius: ${({ theme }) => theme.radius.mediumRadius}px;
   background-color: ${({ theme }) => theme.colors.surface};
   align-items: center;
