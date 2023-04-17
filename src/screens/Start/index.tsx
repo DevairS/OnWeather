@@ -32,7 +32,6 @@ const StartScreen: FC = () => {
   }, [app]);
 
   useEffect(() => {
-    console.log('entrei');
     loadPermissions();
   }, [loadPermissions]);
 

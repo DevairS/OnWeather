@@ -13,6 +13,7 @@ import {
   IconWeather,
   List,
   WrapperCard,
+  Title,
 } from './styles';
 
 type Props = {
@@ -41,12 +42,12 @@ const Forecast: FC<Props> = ({ forecastData, activeUnit }) => {
 
   return (
     <WrapperCard>
-      <TextCard>
+      <Title>
         <FormattedMessage
           id="Home.Forecast.Title"
           defaultMessage="Previsão para os proximos 5 dias"
         />
-      </TextCard>
+      </Title>
       <List<ElementType>
         data={forecastData}
         keyExtractor={(item: ForecastType) => item.date.toString()}

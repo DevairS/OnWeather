@@ -31,6 +31,10 @@ export const CardTop = styled.View`
   align-items: center;
 `;
 
+export const Title = styled(Typography)`
+  padding-bottom: 4px;
+`;
+
 export const TextCard = styled(Typography)``;
 
 export const CardBottom = styled.View``;
